@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
@@ -12,9 +12,15 @@ const IndexPage = ({ data }) => (
     <ul>
       {data &&
         data.allMarkdownRemark.edges.map(edge => (
-          <li key={edge.node.frontmatter.path}>
-            {edge.node.frontmatter.excerpt}
-          </li>
+          <Link
+            key={edge.node.frontmatter.path}
+            to={edge.node.frontmatter.path}
+          >
+            <li>
+              {edge.node.frontmatter.title}
+              {edge.node.frontmatter.excerpt}
+            </li>
+          </Link>
         ))}
     </ul>
   </Layout>
