@@ -18,7 +18,7 @@ Lorem ipsum
 
 Lorem ipsum
 
-![Negative HN comment](./meetup2.jpg)
+![Negative HN comment](./meetup.jpg)
 
 Emphasis, aka italics, with _asterisks_ or _underscores_.
 
