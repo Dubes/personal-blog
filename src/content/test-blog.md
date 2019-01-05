@@ -18,8 +18,6 @@ Lorem ipsum
 
 Lorem ipsum
 
-![Negative HN comment](./meetup2.jpg)
-
 Emphasis, aka italics, with _asterisks_ or _underscores_.
 
 Strong emphasis, aka bold, with **asterisks** or **underscores**.
