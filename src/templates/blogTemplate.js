@@ -9,11 +9,8 @@ const BlogPage = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <div>{title}</div>
-      <div
-        className="blog-content"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      <h1>{title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }

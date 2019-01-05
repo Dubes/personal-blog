@@ -7,7 +7,7 @@ import './layout.css'
 const Layout = ({ children }) => (
   <div className="site-layout">
     <Header />
-    {children}
+    <div className="blog-content">{children}</div>
     <footer>
       © 2018, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
     </footer>
