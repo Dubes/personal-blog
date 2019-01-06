@@ -9,11 +9,12 @@ const BlogTeaser = ({ path, date, title, excerpt }) => (
         {title}
       </Link>
     </div>
+    <small>{date}</small>
     <p>{excerpt}</p>
   </>
 )
 
-BlogTeaser.PropTypes = {
+BlogTeaser.propTypes = {
   path: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
