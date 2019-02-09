@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => (
         data.allMarkdownRemark.edges.map(edge => (
           <BlogTeaser
             key={edge.node.frontmatter.path}
-            path={edge.node.frontmatter.path}
+            path={`/blog${edge.node.frontmatter.path}`}
             date={edge.node.frontmatter.date}
             title={edge.node.frontmatter.title}
             excerpt={edge.node.frontmatter.excerpt}

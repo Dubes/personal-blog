@@ -24,7 +24,7 @@ exports.createPages = ({ graphql, actions }) => {
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
           const path = node.frontmatter.path
           createPage({
-            path,
+            path: `/blog${path}`,
             component: blogPostTemplate,
             context: {
               pathSlug: path,

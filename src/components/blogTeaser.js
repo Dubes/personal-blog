@@ -4,11 +4,19 @@ import { Link } from 'gatsby'
 
 const BlogTeaser = ({ path, date, title, excerpt }) => (
   <>
-    <div>
-      <Link key={path} to={path}>
-        {title}
-      </Link>
-    </div>
+  <h3 style={{marginBottom: `5px`}}>
+    <Link
+      key={path}
+      to={path}
+      style={{
+        textDecoration: `none`,
+        color: `hotpink`,
+      }}
+      rel='bookmark'
+    >
+      {title}
+    </Link>
+    </h3>
     <small>{date}</small>
     <p>{excerpt}</p>
   </>
