@@ -29,6 +29,7 @@ footer {
   grid-column-end: -1;
 }
 .website-headertext {
+  align-self: center;
   grid-row-start: 1;
   grid-column-start: 2;
 }

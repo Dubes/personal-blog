@@ -5,20 +5,16 @@ const Header = () => (
   <>
     <div
       className="website-header"
-      style={{
-        background: `rebeccapurple`,
-      }}
     />
     <div className="website-headertext">
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
-            color: `white`,
             textDecoration: `none`,
           }}
         >
-          //KDU
+          Observance
         </Link>
       </h1>
     </div>
