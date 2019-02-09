@@ -12,6 +12,8 @@ const Header = () => (
           to="/"
           style={{
             textDecoration: `none`,
+            fontWeight: `900`,
+            fontStyle: `italic`
           }}
         >
           Observance
