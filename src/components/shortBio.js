@@ -4,19 +4,31 @@ import bioImage from '../assets/kdu_bio.png'
 
 const ShortBio = () => (
   <>
-    <div style={{ display: `flex` }}>
-      <img src={bioImage} alt='Kapil Dube'
-      style={{ 
-        marginRight: rhythm(1 / 2),
-        borderRadius: '50%'
-        }}  />
-      <p style={{ maxWidth: 310 }}>
-        I am a full stack developer, who loves learning, solving problems &
-        playing video games!
+    <div
+      style={{ display: `flex`, alignItems: `center`, marginBottom: rhythm(1) }}
+    >
+      <img
+        src={bioImage}
+        alt="Kapil Dube"
+        style={{
+          marginRight: rhythm(1 / 2),
+          marginBottom: 0,
+          width: rhythm(2),
+          height: rhythm(2),
+          borderRadius: '50%',
+        }}
+      />
+      <p style={{ maxWidth: 310, marginBottom: 0 }}>
+        Full stack developer in Germany.{' '}
+        <span role="img" aria-label="Love">
+          ❤️
+        </span>{' '}
+        learning & playing video games!
       </p>
     </div>
     <p>
-      This is my personal blog where I share my thoughts, observations & experiments!
+      This is my personal blog where I share my thoughts, learnings and
+      experiments
     </p>
   </>
 )

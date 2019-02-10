@@ -9,9 +9,10 @@ body {
 .site-layout {
   display: grid;
   grid-template-rows: minmax(80px, 10vh) 1fr 10vh;
-  grid-template-columns: 25vw 1fr 25vw;
+  grid-template-columns: minmax(auto, 25vw) minmax(330px, 1fr) minmax(auto, 25vw);
   grid-row-gap: 25px;
 }
+
 .site-content,
 .blog-content {
   grid-row: 2;
