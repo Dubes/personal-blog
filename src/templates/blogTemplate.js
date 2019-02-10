@@ -9,7 +9,7 @@ const BlogPage = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <h1>{title}</h1>
+      <h2>{title}</h2>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )

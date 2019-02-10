@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" keywords={[`gatsby`, `blog`, `react`]} />
     <div className="site-content">
       <ShortBio />
-      <h3>Latest Posts</h3>
+      <h5>Latest Posts</h5>
       {data &&
         data.allMarkdownRemark.edges.map(edge => (
           <BlogTeaser

@@ -18,12 +18,12 @@ const ShortBio = () => (
           borderRadius: '50%',
         }}
       />
-      <p style={{ maxWidth: 310, marginBottom: 0 }}>
-        Full stack developer in Germany.{' '}
-        <span role="img" aria-label="Love">
+      <p style={{ maxWidth: '80vw', marginBottom: 0 }}>
+        Full stack developer in Germany. <br />
+        I <span role="img" aria-label="Love">
           ❤️
         </span>{' '}
-        learning & playing video games!
+        tech & video games!
       </p>
     </div>
     <p>
