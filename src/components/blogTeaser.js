@@ -10,7 +10,7 @@ const BlogTeaser = ({ path, date, title, excerpt }) => (
       to={path}
       style={{
         textDecoration: `none`,
-        color: `peru`,
+        color: `#d23669`,
       }}
       rel='bookmark'
     >
