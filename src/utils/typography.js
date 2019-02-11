@@ -12,7 +12,7 @@ const typography = new Typography({
     'Arial',
   ],
   headerWeight: 700,
-  headerColor: 'peru',
+  headerColor: '#d23669',
   bodyFontFamily: ['Merriweather', 'serif'],
   googleFonts: [
     {
