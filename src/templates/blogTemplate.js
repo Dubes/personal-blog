@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
+import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 
 const BlogPage = ({ data, pageContext }) => {
@@ -9,6 +9,7 @@ const BlogPage = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <Helmet title={title} />
       <h2>{title}</h2>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
