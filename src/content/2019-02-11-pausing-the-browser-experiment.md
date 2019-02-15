@@ -10,9 +10,9 @@ This is an update to the [challenge](/blog/can-i-build-website-only-with-browser
 
 ### What have I achieved so far?
 
-- The layout is responsive
+- The layout is responsive, powered by CSS Grid, which I used without having to look up docs! This may not be a big deal for you, but for someone who can't align a div, this was an awesome feeling!
 - I have the blog automatically deploy with Netlify.
-- The blog is now deployed on a custom domain, which was also a breeze to setup with Netlify, along with HTTPS :heart: !!!
+- The blog is now deployed on a custom domain, which was also a breeze to setup with Netlify, along with HTTPS ❤ !!!
 - Lighthouse audits aren't that bad.
 - I am happy with the font and color choices.
 - It also has a favicon which was also generated in the browser!
@@ -33,5 +33,5 @@ I would like to note, I did not reach out to any one in the Codesandbox communit
 
 - Would also like to give a shoutout to Github, Chrome audits and Firefox dev tools. They have such awesome features, at time I did not even need to open the IDE for small fixes or debugging.
 - Having a browser based IDE was actually fun and had some unintended consequences.
-- Most noticeably, it is awesome for getting some quick fix/experiment done. I remember I once had ten minutes to kill, but my PC was off, I was able to bootup, work on that component, verify the changes and push to git! No way I was going to get that much done on my local IDE.
-- Being able to browse the sandboxes from others on my cell and on the go! I didn't do it often, but whenever I did, it worked like a charm. Also helped with my sanity during the public transport woes in the winter.
+  - Most noticeably, it is awesome for getting some quick fix/experiment done. I remember I once had ten minutes to kill, but my PC was off, I was able to bootup, work on that component, verify the changes and push to git! No way I was going to get that much done on my local IDE.
+  - Being able to browse the sandboxes from others on my cell and on the go! I didn't do it often, but whenever I did, it worked like a charm. I found it better to learn compared to reading the docs! Also helped with my sanity during the public transport woes in the winter.
