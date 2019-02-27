@@ -4,6 +4,8 @@ import './brokenHeart.css'
 
 const FeedbackSuccessPage = () => (
   <Layout>
+    <h2>Thank you! &nbsp;&nbsp; Vielen Dank! &nbsp;&nbsp; ¡Muchas gracias!</h2>
+
     <svg className="heart-loader" viewBox="0 0 90 90" version="1.1">
       <g className="heart-loader__group">
         <path
@@ -137,7 +139,6 @@ const FeedbackSuccessPage = () => (
         />
       </g>
     </svg>
-    <h3>Thank you! Vielen Dank! ¡Muchas gracias!</h3>
   </Layout>
 )
 

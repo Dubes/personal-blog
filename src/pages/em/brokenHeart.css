@@ -2,7 +2,7 @@
   position: absolute;
   display: block;
   left: 50%;
-  top: 50%;
+  top: 30%;
   margin-top: -90px;
   width: 180px;
   height: 180px;
@@ -38,15 +38,15 @@
   fill: transparent;
   stroke-dasharray: 308.522, 308.522;
   stroke-dashoffset: 308.522;
-  -webkit-animation: heart-anim 8s 0s 1;
-  animation: heart-anim 8s 0s 1;
+  -webkit-animation: heart-anim 8s 0s forwards;
+  animation: heart-anim 8s 0s forwards;
 }
 .heart-loader__stroke {
   stroke: white;
   stroke-dasharray: 600, 600;
   stroke-dashoffset: 600;
-  -webkit-animation: strokeAnim 8s 4s 1;
-  animation: strokeAnim 8s 4s 1;
+  -webkit-animation: strokeAnim 8s 4s forwards;
+  animation: strokeAnim 8s 4s forwards;
 }
 
 @-webkit-keyframes strokeAnim {
@@ -73,20 +73,20 @@
   }
 }
 @-webkit-keyframes group-anim {
-  43% {
+  5% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
-  100% {
+  10% {
     opacity: 1;
   }
 }
 @keyframes group-anim {
-  43% {
+  5% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
-  100% {
+  10% {
     opacity: 1;
   }
 }

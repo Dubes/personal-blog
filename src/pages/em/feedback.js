@@ -8,7 +8,7 @@ const FeedbackPage = () => (
       id="emFeedbackForm"
       name="em-feedback"
       method="post"
-      action="/em/success"
+      action="/em/thankyou"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
