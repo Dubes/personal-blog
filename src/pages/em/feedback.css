@@ -1,129 +1,124 @@
+#emFeedbackForm {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+}
 
-.heart-loader {
-    position: absolute;
-    display: block;
-    left: 50%;
-    top: 50%;
-    margin-top: -90px;
-    width: 180px;
-    height: 180px;
-    overflow: visible;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-  .heart-loader__group {
-    -webkit-transform-origin: 0 90px;
-            transform-origin: 0 90px;
-    -webkit-animation: group-anim 8s 0s;
-            animation: group-anim 8s 0s;
-  }
-  .heart-loader__circle {
-    stroke: #B8B8B8;
-    stroke-dasharray: 188.522, 188.522;
-    stroke-dashoffset: 188.522;
-    -webkit-transform-origin: 60px 30px;
-            transform-origin: 60px 30px;
-  }
-  .heart-loader__circle.m--left {
-    opacity: 0;
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-  }
-  .heart-loader__circle.m--right {
-    opacity: 0;
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-  }
-  .heart-loader__heartPath {
-    stroke: #E21737;
-    fill: transparent;
-    stroke-dasharray: 308.522, 308.522;
-    stroke-dashoffset: 308.522;
-    -webkit-animation: heart-anim 8s 0s 1;
-            animation: heart-anim 8s 0s 1;
-  }
-  .heart-loader__stroke {
-    stroke: white;
-    stroke-dasharray: 600, 600;
-    stroke-dashoffset: 600;
-    -webkit-animation: strokeAnim 8s 4s 1;
-            animation: strokeAnim 8s 4s 1;
-  }
-  
-  @-webkit-keyframes strokeAnim {
-    33% {
-      stroke-dashoffset: 600;
-    }
-    66% {
-      stroke-dashoffset: 0;
-    }
-    100% {
-      stroke-dashoffset: 0;
-    }
-  }
-  
-  @keyframes strokeAnim {
-    33% {
-      stroke-dashoffset: 600;
-    }
-    66% {
-      stroke-dashoffset: 0;
-    }
-    100% {
-      stroke-dashoffset: 0;
-    }
-  }
-  @-webkit-keyframes group-anim {
-    43% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes group-anim {
-    43% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes heart-anim {
-    55% {
-      stroke-dashoffset: 308.522;
-      fill: transparent;
-    }
-    70% {
-      stroke-dashoffset: 0;
-      fill: transparent;
-    }
-    87% {
-      stroke-dashoffset: 0;
-      fill: #E21737;
-    }
-    100% {
-      stroke-dashoffset: 0;
-      fill: #E21737;
-    }
-  }
-  @keyframes heart-anim {
-    55% {
-      stroke-dashoffset: 308.522;
-      fill: transparent;
-    }
-    70% {
-      stroke-dashoffset: 0;
-      fill: transparent;
-    }
-    87% {
-      stroke-dashoffset: 0;
-      fill: #E21737;
-    }
-    100% {
-      stroke-dashoffset: 0;
-      fill: #E21737;
-    }
-  }
+.buttonBar {
+  grid-column-end: -1;
+  justify-content: center;
+}
+
+#emFeedbackForm #name {
+  border: 0;
+  margin: 0;
+  box-sizing: content-box;
+  font-style: italic;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+}
+
+#emFeedbackForm #message {
+  border: 0;
+  margin: 0;
+  box-sizing: content-box;
+  font-style: italic;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+}
+
+.form-btn,
+.form-btn-cancel {
+  background: transparent;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 5px 24px;
+  margin-top: 1.25rem;
+  margin-right: 1rem;
+  position: relative;
+  z-index: 0;
+  transition: transform 0.28s ease;
+  will-change: transform;
+}
+
+.form-btn::before,
+.form-btn::after,
+.form-btn-cancel::before,
+.form-btn-cancel::after {
+  position: absolute;
+  content: '';
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+}
+
+.form-btn-cancel::after {
+  right: 0px;
+}
+
+.form-btn::before,
+.form-btn-cancel::before,
+.form-btn-error::before {
+  background: #337ab7;
+  z-index: -2;
+}
+
+.form-btn::after,
+.form-btn-cancel::after {
+  background: #000;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.28s ease;
+  will-change: opacity;
+}
+
+.form-btn:focus,
+.form-btn-cancel:focus {
+  outline: none;
+}
+
+.form-btn:focus::after,
+.form-btn:hover::after,
+.form-btn-cancel:focus::after,
+.form-btn-cancel:hover::after {
+  opacity: 0.3;
+}
+
+.form-btn:active,
+.form-btn-cancel:active {
+  transform: translateY(1px);
+}
+
+.form-btn-cancel {
+  transition: color 0.28s ease, transform 0.28s ease;
+  color: #b52b27;
+  border-color: currentColor;
+  will-change: color, transform;
+}
+
+.form-btn-cancel.-nooutline {
+  border-color: transparent;
+}
+
+.form-btn-cancel::before {
+  background: #b52b27;
+  opacity: 0;
+  transition: opacity 0.28s ease;
+  will-change: opacity;
+}
+
+.form-btn-cancel::after {
+  display: none;
+}
+
+.form-btn-cancel:focus,
+.form-btn-cancel:hover {
+  color: #fff;
+}
+
+.form-btn-cancel:focus::before,
+.form-btn-cancel:hover::before {
+  opacity: 1;
+}
