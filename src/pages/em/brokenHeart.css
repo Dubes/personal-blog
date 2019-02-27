@@ -1,0 +1,128 @@
+.heart-loader {
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  margin-top: -90px;
+  width: 180px;
+  height: 180px;
+  overflow: visible;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.heart-loader__group {
+  -webkit-transform-origin: 0 90px;
+  transform-origin: 0 90px;
+  -webkit-animation: group-anim 8s 0s;
+  animation: group-anim 8s 0s;
+}
+.heart-loader__circle {
+  stroke: #b8b8b8;
+  stroke-dasharray: 188.522, 188.522;
+  stroke-dashoffset: 188.522;
+  -webkit-transform-origin: 60px 30px;
+  transform-origin: 60px 30px;
+}
+.heart-loader__circle.m--left {
+  opacity: 0;
+  -webkit-transform: translateY(-30px);
+  transform: translateY(-30px);
+}
+.heart-loader__circle.m--right {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+  transform: translateY(30px);
+}
+.heart-loader__heartPath {
+  stroke: #e21737;
+  fill: transparent;
+  stroke-dasharray: 308.522, 308.522;
+  stroke-dashoffset: 308.522;
+  -webkit-animation: heart-anim 8s 0s 1;
+  animation: heart-anim 8s 0s 1;
+}
+.heart-loader__stroke {
+  stroke: white;
+  stroke-dasharray: 600, 600;
+  stroke-dashoffset: 600;
+  -webkit-animation: strokeAnim 8s 4s 1;
+  animation: strokeAnim 8s 4s 1;
+}
+
+@-webkit-keyframes strokeAnim {
+  33% {
+    stroke-dashoffset: 600;
+  }
+  66% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes strokeAnim {
+  33% {
+    stroke-dashoffset: 600;
+  }
+  66% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes group-anim {
+  43% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes group-anim {
+  43% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes heart-anim {
+  55% {
+    stroke-dashoffset: 308.522;
+    fill: transparent;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  87% {
+    stroke-dashoffset: 0;
+    fill: #e21737;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #e21737;
+  }
+}
+@keyframes heart-anim {
+  55% {
+    stroke-dashoffset: 308.522;
+    fill: transparent;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  87% {
+    stroke-dashoffset: 0;
+    fill: #e21737;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #e21737;
+  }
+}
