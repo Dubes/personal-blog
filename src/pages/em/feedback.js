@@ -33,8 +33,8 @@ const FeedbackPage = () => (
       <textarea
         name="message"
         id="message"
-        placeholder="feel free to use Google translate if you feel the need to be anonymous"
-        rows="3"
+        placeholder="feel free to use Google translate if you think I can identify you from your writing style"
+        rows="4"
         required="true"
       />
       <div className="buttonBar">
