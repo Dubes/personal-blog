@@ -1,9 +1,19 @@
 import React from 'react'
 import Layout from '../../components/layout'
+import Helmet from 'react-helmet'
 import './feedback.css'
 
 const FeedbackPage = () => (
   <Layout>
+    <Helmet
+      title="KDube - Feedback"
+      meta={[
+        {
+          name: `robots`,
+          content: 'noindex',
+        },
+      ]}
+    />
     <form
       id="emFeedbackForm"
       name="em-feedback"

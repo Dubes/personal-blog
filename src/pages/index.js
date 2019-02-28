@@ -8,7 +8,18 @@ import SEO from '../components/seo'
 const IndexPage = ({ data }) => (
   <html>
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `blog`, `react`]} />
+      <SEO
+        title="Home"
+        keywords={[
+          `Kapil`,
+          `blog`,
+          `tech`,
+          `gatsby`,
+          `react`,
+          `gaming`,
+          `Kapil Dube`,
+        ]}
+      />
       <div className="site-content">
         <ShortBio />
         <h5>Latest Posts</h5>

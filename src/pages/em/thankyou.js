@@ -1,9 +1,20 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Layout from '../../components/layout'
+
 import './brokenHeart.css'
 
 const FeedbackSuccessPage = () => (
   <Layout>
+    <Helmet
+      title="Thank you!"
+      meta={[
+        {
+          name: `robots`,
+          content: 'noindex',
+        },
+      ]}
+    />
     <h2>Thank you! &nbsp;&nbsp; Vielen Dank! &nbsp;&nbsp; ¡Muchas gracias!</h2>
 
     <svg className="heart-loader" viewBox="0 0 90 90" version="1.1">
