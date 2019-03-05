@@ -6,12 +6,24 @@ import Layout from '../components/layout'
 const BlogPage = ({ data, pageContext }) => {
   const title = data.markdownRemark.frontmatter.title
   const html = data.markdownRemark.html
+  const publishDate = data.markdownRemark.frontmatter.date
 
   return (
     <Layout>
       <Helmet title={title} />
       <h2>{title}</h2>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <small>{publishDate}</small>
+      <br />
+      <div
+        style={{ marginTop: `10px` }}
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+      <hr />
+      <strong>Comments:</strong>
+      <div 
+        style={{ marginTop: `10px` }}>
+        Nothing good has ever come out of the comments section on the internet. But I would love to hear your thoughts on <a href="https://mobile.twitter.com/kapsii">twitter</a>.
+      </div>
     </Layout>
   )
 }
@@ -22,6 +34,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date(formatString: "MMMM DD, YYYY")
       }
     }
   }
