@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kapil Dube <dube.kapil@gmail.com>",
   "dependencies": {
+    "@weknow/gatsby-remark-twitter": "^0.2.0",
     "gatsby": "^2.0.76",
     "gatsby-plugin-manifest": "^2.0.9",
     "gatsby-plugin-react-helmet": "^3.0.2",
