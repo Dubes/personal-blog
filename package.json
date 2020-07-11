@@ -6,11 +6,11 @@
   "author": "Kapil Dube <dube.kapil@gmail.com>",
   "dependencies": {
     "@weknow/gatsby-remark-twitter": "^0.2.0",
-    "gatsby": "^2.0.76",
-    "gatsby-plugin-manifest": "^2.0.9",
-    "gatsby-plugin-react-helmet": "^3.0.2",
-    "gatsby-plugin-sharp": "^2.0.14",
-    "gatsby-plugin-typography": "^2.2.7",
+    "gatsby": "2.24.2",
+    "gatsby-plugin-manifest": "2.4.18",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-sharp": "^2.6.19",
+    "gatsby-plugin-typography": "^2.5.10",
     "gatsby-remark-images": "3.0.1",
     "gatsby-remark-prismjs": "3.1.4",
     "gatsby-source-filesystem": "^2.0.8",
@@ -31,7 +31,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "start": "npm run develop",
+    "start": "yarn develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
@@ -40,9 +40,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Dubes/blog"
+    "url": "https://github.com/Dubes/personal-blog"
   },
   "bugs": {
-    "url": "https://github.com/Dubes/blog/issues"
+    "url": "https://github.com/Dubes/personal-blog/issues"
   }
 }
