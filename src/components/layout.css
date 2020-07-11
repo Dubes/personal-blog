@@ -9,7 +9,10 @@ body {
 .site-layout {
   display: grid;
   grid-template-rows: minmax(80px, 10vh) 1fr 10vh;
-  grid-template-columns: minmax(auto, 25vw) minmax(330px, 1fr) minmax(auto, 25vw);
+  grid-template-columns: minmax(auto, 25vw) minmax(330px, 1fr) minmax(
+      auto,
+      25vw
+    );
   grid-row-gap: 25px;
 }
 
@@ -33,4 +36,11 @@ footer {
   align-self: center;
   grid-row-start: 1;
   grid-column-start: 2;
+}
+
+blockquote {
+  border-left: 0.32813rem solid hsla(0, 0%, 0%, 0.9);
+  padding-left: 1.5rem;
+  margin-left: -1.5rem;
+  font-style: italic;
 }
