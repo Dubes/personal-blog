@@ -3,12 +3,12 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import ShortBio from '../components/shortBio'
 import BlogTeaser from '../components/blogTeaser'
-import SEO from '../components/seo'
+import SearchEngineOptimizationHints from '../components/searchEngineOptimizationHints'
 
 const IndexPage = ({ data }) => (
-  <html>
+  <html lang="en">
     <Layout>
-      <SEO
+      <SearchEngineOptimizationHints
         title="Home"
         keywords={[
           `Kapil`,
