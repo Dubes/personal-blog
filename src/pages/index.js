@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query HomepageQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(filter: {fields: {category: {eq: "blog"}}}, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           frontmatter {
