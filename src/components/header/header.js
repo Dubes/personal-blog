@@ -3,9 +3,7 @@ import React from 'react'
 
 const Header = () => (
   <>
-    <div
-      className="website-header"
-    />
+    <div className="website-header" />
     <div className="website-headertext">
       <h1 style={{ margin: 0 }}>
         <Link
@@ -14,7 +12,7 @@ const Header = () => (
             color: `black`,
             textDecoration: `none`,
             fontWeight: `900`,
-            fontStyle: `italic`
+            fontStyle: `italic`,
           }}
         >
           Observance
