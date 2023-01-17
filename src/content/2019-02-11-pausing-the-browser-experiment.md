@@ -29,6 +29,8 @@ I am still new to the whole "Platform" (as [@theKitze](https://twitter.com/theki
 
 I would like to note, I did not reach out to any one in the Codesandbox community for help on this, so, it is possible that the feature may exists or be available only to Patreons of Codesandbox.
 
+I don't see myself continuing with this experiment though. I am too used to my local development setup and honestly I don't face any pain which forces me to move to the browser based environment. I am really impressed and hopeful for this evolution though. I can see this as lifting a significant barrier of entry from developers who face constraints. Decent developer machines are costly. Working with nodejs requires bandwidth. Things we take for granted, but are not something others are priviliged to have. I really look forward to what these people will create!
+
 #### Other notes
 
 - Would also like to give a shoutout to Github, Chrome audits and Firefox dev tools. They have such awesome features, at time I did not even need to open the IDE for small fixes or debugging.
