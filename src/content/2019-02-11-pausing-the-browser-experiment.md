@@ -1,7 +1,7 @@
 ---
 path: '/can-i-build-website-only-with-browser-update-2'
 date: '2019-02-11'
-title: 'Progress Check #2 : Building my blog only using the browser'
+title: 'Concluding the experiment : Building my blog only using the browser'
 tags: ['challenge']
 excerpt: "My blog is now in a state I am reasonably happy with, but I need to pause this experiment as I have to get ready for some new challenges. Let's recap what I have learnt."
 ---
