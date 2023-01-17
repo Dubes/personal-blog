@@ -1,7 +1,7 @@
 ---
 path: '/lessons-from-csgo-teamwork'
 date: '2020-07-11'
-title: 'How CounterStrike help me with teamwork in real life'
+title: 'How CounterStrike helped me with teamwork in real life'
 tags: ['learning', 'teamwork', 'counterstrike', 'CS:GO']
 excerpt: 'I learnt a lot about team work, dynamics, personalities by playing CS:GO, a video game. These helped me immensely in my career, I am passing this knowledge along.'
 ---
@@ -46,7 +46,7 @@ However, in some extreme cases, the impact of a _toxic_ team culture can be deva
 
 In the first competitive match I played, I had a toxic team mate, I had no idea how to deal with him, I did not even know if that behavior was _normal_ or not! I won that match, but I did not enjoy the experience. I started sticking to the casual mode. It took a nice person in casual to _tell_ me what I faced was not normal. He encouraged me to give it a try again. Had it not been for him, I might not have played competitive mode again.
 
-I felt like this in a video game. Imagine how a new comer to this industry would feel _in real life_! With that said, let us now look at how we can build a good team culture. Sadly, there is no silve bullet, but small things, which hopefully are easy for you to try.
+I felt like this in a video game. Imagine how a new comer to this industry would feel _in real life_! Wi`th that said, let us now look at how we can build a good team culture. Sadly, there is no silve bullet, but small things, which hopefully are easy for you to try.
 
 ### Importance of familiarity
 
