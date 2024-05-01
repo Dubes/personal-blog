@@ -44,5 +44,6 @@
   },
   "bugs": {
     "url": "https://github.com/Dubes/personal-blog/issues"
-  }
+  },
+  "packageManager": "yarn@4.1.1"
 }
