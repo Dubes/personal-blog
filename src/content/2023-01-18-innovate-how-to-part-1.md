@@ -3,7 +3,7 @@ path: '/how-to-setup-to-innovate-pt-1'
 date: '2023-01-18'
 title: 'Innovate: But how to? (part 1)'
 tags: ['tips', 'transformation', 'innovation', 'healthy team']
-excerpt: 'Innovate or Die, that seems to be the mantra for running a successful business in today's world. But how do you do that?'
+excerpt: "Innovate or Die, that seems to be the mantra for running a successful business in today's world. But how do you do that?"
 ---
 
 Innovation. The thing that every org ~wants~ needs. I think it is safe to assume that if something makes it to the [Scaled Agile Framework](https://www.scaledagileframework.com/innovation-and-planning-iteration/), it is widely requested.
