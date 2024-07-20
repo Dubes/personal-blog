@@ -20,16 +20,18 @@ const BlogPage = ({ data, pageContext }) => {
       />
       <hr />
       <strong>Comments:</strong>
-      <div 
-        style={{ marginTop: `10px` }}>
-        Nothing good has ever come out of the comments section on the internet. But I would love to hear your thoughts on <a href="https://mobile.twitter.com/kapsii">twitter</a>.
+      <div style={{ marginTop: `10px` }}>
+        Nothing good has ever come out of the comments section on the internet.
+        But I would love to hear your thoughts on{' '}
+        <a href="https://bsky.app/profile/dubes.bsky.social">Bluesky</a> or{' '}
+        <a href="https://www.linkedin.com/in/kapil-dube/">LinkedIn</a>.
       </div>
     </Layout>
   )
 }
 
 export const query = graphql`
-  query($pathSlug: String!) {
+  query ($pathSlug: String!) {
     markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
       html
       frontmatter {
