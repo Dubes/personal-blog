@@ -17,7 +17,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: 'src/assets/favicon-32x32.png'
+        icon: 'src/assets/favicon-32x32.png',
       },
     },
     {
@@ -49,6 +49,13 @@ module.exports = {
       options: {
         name: `drafts`,
         path: `${__dirname}/src/drafts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/src/assets`,
       },
     },
     {
