@@ -39,7 +39,7 @@ Document _only_ the failed things & just adopt the successful ones. When you ado
 
 ### Not evaluating them once accepted
 
-Just because something worked when you introduced it, doesn't mean it was the right choice. Learn to let go, even if it was a labor of love. Keep an eye on it, and see if it still brings you value, else Marie Kondo that
+Just because something worked when you introduced it, doesn't mean it was the right choice. Learn to let go, even if it was a labor of love. Keep an eye on it, and see if it still brings you value, else Marie Kondo that.
 
 ### Not being aware of the barriers
 
