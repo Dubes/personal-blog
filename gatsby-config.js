@@ -31,6 +31,7 @@ module.exports = {
               maxWidth: 590,
             },
           },
+          'gatsby-remark-external-links',
           {
             resolve: `gatsby-remark-prismjs`,
           },
