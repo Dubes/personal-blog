@@ -11,7 +11,7 @@ const BlogPage = ({ data, pageContext }) => {
   return (
     <Layout>
       <Helmet title={title} />
-      <h2>{title}</h2>
+      <title>{title}</title>
       <small>{publishDate}</small>
       <br />
       <div
