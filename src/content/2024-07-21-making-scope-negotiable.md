@@ -70,7 +70,7 @@ Slicing them like this gives the benefit that we can stop playing the feature at
 
 Hopefully someone in your team points out that we forgot to plan an acceptance criteria! We need to make our audit framework reusable by other teams.
 
-![Screenshot introduces a new story for creating a shareable artefact. It assumes it is a jar and has lots of tasks related to this](<(../assets/img/pass-2-at-slicing-features.jpg)>)
+![Screenshot introduces a new story for creating a shareable artefact. It assumes it is a jar and has lots of tasks related to this](../assets/img/pass-2-at-slicing-features.jpg)
 
 ## Step 3: Identify dependencies and information gaps
 
