@@ -1,6 +1,6 @@
 ---
 path: '/why-is-agile-not-working-for-you'
-date: '2024-07-21'
+date: '2024-08-10'
 title: 'Why is agile not working for you?'
 tags: ['isAgileDead', 'transformation', 'agile']
 excerpt: 'Orgs have been investing in agile transformation for years now, but on the ground it does not seem to be working. Teams are struggling to adopt agile. This is an opinion piece on why.'
@@ -28,18 +28,21 @@ This realization has created a huge demand. Demand that cannot be realistically 
 
 When the demand is this overwhelming, many people try to fill it, not all of them are qualified to do so. Companies responded by insisting on credentials and certification. This led to a rush for getting certified, as it was now seen as a necessity to get into this field. I think this is where it started to go wrong.
 
-Certifications and trainings existed prior to this influx of people. Key difference was the incentive.
+Certifications and trainings existed prior to this influx of people. But the motivation & incentives are different.
 
-People who did certifications and training prior to the influx, were intrinsically motivated by a desire to learn and explore the potential of agile methodologies. I recall a shared enthusiasm among my peers and instructors for the transformative power of agile practices. We were captivated by the prospect of the world where we can achieve significant outcomes with such little complexity & overhead. Agility made us feel seen as humans with ideas than machines with tasks.
+People who did certifications and training prior to the influx, were intrinsically motivated by a desire to learn and explore the potential of agile methodologies. I recall a shared enthusiasm among my peers and instructors for the transformative power of agile practices. We were captivated by the prospect of the world where we can achieve significant outcomes with such little complexity & overhead. Agile methodoliges made the team feel seen as humans with ideas than machines with tasks.
 
-However, the current emphasis on certifications has shifted the focus from learning to credential attainment. The incentives associated with certification often prioritize memorizing the document over the underlying knowledge and skills.
+However, the current emphasis on certifications has shifted the focus from learning to a necessity. This is not to say that credentials are not valuable, nor that everyone who got the certifications recently did not want to learn.
 
-# Can agile be taught?
+The people who saw credentials as a way to enter this job, do not see the things they learnt as things to _try_, they did not focus on the _problems_ being addressed. Instead they interpreted it as a set of instructions that must be applied, in full force & with no deviation. This is not what agile is about.
 
-My wonderful colleague Birgitta, mentioned that "Agile is counter-intuitive". This is the truth that seem to have been forgotten.
-There is no formula for agile, if there was one, agile would not be counter-intuitive, you could follow that formula and your intuitions.
+# What is agile about then?
 
-Agility means stepping away from the norms and processes, looking for what is not working, finding out what can be improved and trying to improve it. If you are part of the setup that created the norms, your intuitions will hold you back from improving, as they were the ones which introduced the problems in the first place.
+There is no formula for agile. There isn't even a definition. It is an idea originating from a manifesto. A manifesto which lists [4 values](https://agilemanifesto.org/) & [12 principles](https://agilemanifesto.org/principles.html). Agile software development is an umbrella term, a pretty broad one at that.
+
+For me, agility means stepping away from the norms and processes, looking for what is not working, finding out what can be improved and trying to improve it. Rinse and repeat. There is no end to improving, you can have pauses, but never stop. Keep your goals in focus, work towards them relentlessly
+
+My wonderful colleague [Birgitta](https://birgitta.info/), brought up the point that "Agile is counter-intuitive". This is the truth which seems to have been forgotten. When you are in a setup where , your intuitions & biases will hold you back from improving.
 
 This cannot be taught in a course or a couple of seminars. One should look at amassing a lot of tools and techniques. Sharing and learning from experiences. Leveraging those around you.
 
