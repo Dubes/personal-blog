@@ -45,7 +45,7 @@ There are frameworks for agile software development, most popular ones being SAF
 
 For me, agility means stepping away from the norms and processes, looking for what is not working, finding out what can be improved and trying to improve it. Rinse and repeat. There is no end to improving, you can have pauses, but never stop. Keep your goals in focus, work towards them relentlessly
 
-My wonderful colleague [Birgitta](https://birgitta.info/), brought up the point that "Agile is counter-intuitive". This is the truth which seems to have been forgotten. When you are in a setup where , your intuitions & biases will hold you back from improving.
+My wonderful colleague [Birgitta](https://birgitta.info/), brought up the point that "Agile is counter-intuitive". This is the truth which seems to have been forgotten. When you are deeply embedded in the setup your own intuitions & biases can hold you back from improving. Being brave to carry on experimenting, looking back at the past to analyze objectively & learning from a diverse sets of resources is the skill which can help, but one that is hard to master.
 
 This cannot be taught in a course or a couple of seminars. One should look at amassing a lot of tools and techniques. Sharing and learning from experiences. Leveraging those around you.
 
