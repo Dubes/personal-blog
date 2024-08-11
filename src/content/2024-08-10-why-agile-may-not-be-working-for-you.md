@@ -1,9 +1,9 @@
 ---
-path: '/why-is-agile-not-working-for-you'
+path: '/why-agile-may-not-be-working-for-you'
 date: '2024-08-10'
-title: 'Why is agile not working for you?'
+title: 'Why agile may not be working for your teams?'
 tags: ['isAgileDead', 'transformation', 'agile']
-excerpt: 'Orgs have been investing in agile transformation for years now, but on the ground it does not seem to be working. Teams are struggling to adopt agile. This is an opinion piece on why.'
+excerpt: 'Despite sustained & substantial investments in agile transformation, many teams are struggling to transform. This is an opinion post pondering if scaling the supply of skilled agilist is the reason.'
 ---
 
 # Why is agile not working for your teams?
@@ -14,7 +14,8 @@ I believe that agile remains a vital and relevant approach. However, the difficu
 
 In my interactions with teams, discussions frequently revolve around agile practices. It is clear that the way we work and collaborate is intrinsically linked to the technology we employ. Both have to go hand in hand in order to produce the outcome we desire.
 
-This blog post offers my perspective on the current state of agile. Opinions I hold loosely. Opinions I am willing to change with new experiences and information. I will also try to share my practical advice but as separate posts so that they don't get diluted with opinions.
+This blog post offers my perspective on the current state of agile, opinions I hold loosely and open to change with new experiences and information.
+I have chosen to keep the practical advise out of this post in order to not dilute them with opinions. I have offered some practical advice in separate posts, such as: [on estimation](https://observance.io/blog/making-scope-negotiable/) & [on story points](https://observance.io/blog/making-story-points-work/) & will continue to do so!
 
 # Agile & Scaling
 
@@ -39,6 +40,8 @@ The people who saw credentials as a way to enter this job, do not see the things
 # What is agile about then?
 
 There is no formula for agile. There isn't even a definition. It is an idea originating from a manifesto. A manifesto which lists [4 values](https://agilemanifesto.org/) & [12 principles](https://agilemanifesto.org/principles.html). Agile software development is an umbrella term, a pretty broad one at that.
+
+There are frameworks for agile software development, most popular ones being SAFe®, Scrum & Kanban. These frameworks offer a lot of guidance & some hints, but they won't work when taken religiously. The important bit to remember is these are _frameworks_, they still need to be adapted and tailored to your unique needs. To tailor them we need agility, leading to a chicken and egg problem.
 
 For me, agility means stepping away from the norms and processes, looking for what is not working, finding out what can be improved and trying to improve it. Rinse and repeat. There is no end to improving, you can have pauses, but never stop. Keep your goals in focus, work towards them relentlessly
 
