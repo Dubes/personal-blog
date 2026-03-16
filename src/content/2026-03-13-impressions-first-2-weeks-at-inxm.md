@@ -3,12 +3,12 @@ path: '/impressions-first-2-weeks-at-inxm'
 date: '2026-03-13'
 title: 'Experience Report: Switching from enterprise setup to startup'
 tags: ['impressions', 'culture', 'agile']
-excerpt: 'My newest adventure came with lots of changes: from working in an enterprise-y setup to joining a startup, from leading a globally distributed setup of almost 200 people to being one of the 4 devs, and from leveraging an AI-assisted ecosystem to building one. This blog post records my impressions from the first two weeks of this adventure.'
+excerpt: 'My newest adventure came with lots of changes: from working in an enterprise-y setup to joining a startup, from leading a globally distributed setup of almost 200 people to being one of the 4 devs, and from dabbling in AI-assisted tools and the agentic ecosystem to being at the bleeding edge of it. This blog post records my impressions from the first two weeks of this adventure.'
 ---
 # Foreword
-I joined INXM two weeks ago. This switch came with lots of changes for me. I went from working in enterprise setups to a startup. I went from leading a globally distributed program of almost 200 people to being one of the 4 devs on the team. I went from almost exclusively reading code to writing lots of it. I went from dabbling in AI-assisted tools and the agentic ecosystem to being at the bleeding edge of it. I had my hopes, but I also had my share of fears.
+I joined [INXM](https://www.linkedin.com/company/inxm/posts/?feedView=all) two weeks ago. This switch came with lots of changes for me. I went from working in enterprise setups to a startup. I went from leading a globally distributed program of almost 200 people to being one of the 4 devs on the team. I went from almost exclusively reading code to writing lots of it. I went from dabbling in AI-assisted tools and the agentic ecosystem to being at the bleeding edge of it. I had my hopes, but I also had my share of fears.
 
-At the end of these two weeks, I feel like I am actively contributing to our product. This is the most autonomous and productive I have felt at this milestone in my career so far. This blog post presents my reflections on what enabled me to get to this state and what I need to continue to work on.
+At the end of these two weeks, I feel like I am actively contributing to our product. This is the most ___autonomous___ and ___productive___ I have felt at this milestone in my career so far. This blog post presents my reflections on what enabled me to get to this state and what I need to continue to work on.
 
 # What enabled me?
 ## Company culture that enables focus
@@ -54,11 +54,13 @@ I have tried some small changes that have helped, but I think I need to keep exp
 ## LLMs -- Lazy Lying Maniacs
 Agentic AI assistants really accelerate my work, but I need to look carefully at what they do. They have wowed me, but also frustrated me greatly, sometimes within a span of 15 minutes.
 
-They can be lazy. "Oh, that test is failing, you know what, let's delete it".
-They can lie to your face, very confidently. "No, Azure can't do that. You are wrong". When I send them to the Azure documentation, they at least apologize. 
-They can be maniacs. They agree to everything you asked them to do, and to the guardrails they should follow, but every now and then, they still yolo it and try to git force-push their nonsense.
+They can be _lazy_. "Oh, that test is failing, you know what, let's delete it".
 
-I also hate the fact that they respond well to threats. I have spent decades trying to improve my non-violent communication skills. Threats and shouting are things I never want to see in any workplace. But if me threatening Claude makes it do what I had set it to do, I fear that the behavior will be reinforced in my brain.
+They can _lie_ to your face, very confidently. "No, Azure can't do that. You are wrong". When I send them to the Azure documentation, they at least apologize.
+
+They can be _maniacs_. They agree to everything you asked them to do, and to the guardrails they should follow, but every now and then, they still yolo it and try to git force-push their nonsense.
+
+I also hate the fact that they respond well to threats. I have spent decades trying to improve my [nonviolent communication](https://www.cnvc.org/) skills. Threats and shouting are things I never want to see in any workplace. But if me threatening Claude makes it do what I had set it to do, I fear that the behavior will be reinforced in my brain.
 
 Do not get me wrong, they are still amazing and very valuable. But human oversight is very much needed, even for trivial tasks. I need to learn how to micromanage these agents. Again, that is a skill I do not possess and have always hated.
 
