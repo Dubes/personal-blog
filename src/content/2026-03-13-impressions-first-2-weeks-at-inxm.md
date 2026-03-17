@@ -41,6 +41,11 @@ Our onboarding sessions were focused on orienting us in the product, codebase, a
 ## Solid foundations of the code base
 When I got access to our GitHub and saw 96 repositories, I had a mild panic attack. But this setup was created with our craft at the forefront. Each repo does one thing. Structures are uniform. Context is contained and does not leak. This works very well for AI coding assistant tools like Claude, but also for humans like me.
 
+## Agile is still alive and useful as ever!
+No one here has claimed to be agile, this word has not been uttered even once, yet our actions and mode of operations demonstrates agility. This makes me really happy. [Agile](https://www.dictionary.com/browse/agile) is primarily an adjective, but over the past decade or so, thanks to the monetization of Agile, it has been treated as a noun. One should never _claim_ to be agile, they should strive to _demonstrate_ agility. 
+
+I have questioned myself if I am looking at things through rose tinted glasses, if this is a honeymoon period? My reflections concluded otherwise. We have delivery pressure, the pace of AI startups is breakneck and our survival depends on our performance. Could the stakes be higher? What gives me confidence is that we still live the [agile manifesto](https://agilemanifesto.org/). We respond to change over following a plan. Our focus areas are dictated by our vision, but shaped by customer feedback. Our processes are not set in stone, they evolve with us humans. Craft is at the heart of what we do, supported by processes and documentation, not the other way around.
+
 # What did I struggle with?
 The theme of this section could be: I need to learn a lot, but also unlearn a lot.
 
