@@ -10,7 +10,9 @@ excerpt: 'Delivery pressure is not new, but sustained delivery pressure is. It i
 
 Delivery pressure is not new to our industry. We have always had it. A missed deadline here, a crunch time there. What _is_ new is that delivery pressure has become sustained. In the past, crunch time was followed by recovery time. Now, the crunch _is_ the norm.
 
-The expectations from investors, markets, and businesses have reached levels that many teams simply cannot keep up with. Deliver faster. Innovate more. Deliver yesterday. More features, more output, more, more, more. It is like that meme where someone keeps saying "more" but the "perfection" part never arrives.
+The expectations from investors, markets, and businesses have reached levels that many teams simply cannot keep up with. Deliver faster. Innovate more. Deliver yesterday. More features, more output, more, more, more.
+
+![A looping gif of Kylo Ren menancingly screaming more](https://giphy.com/embed/OsfVaOer7N2265YTRF)
 
 # Why we keep getting it wrong
 
