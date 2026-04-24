@@ -12,7 +12,7 @@ Delivery pressure is not new to our industry. We have always had it. A missed de
 
 The expectations from investors, markets, and businesses have reached levels that many teams simply cannot keep up with. Deliver faster. Innovate more. Deliver yesterday. More features, more output, more, more, more.
 
-![A looping gif of Kylo Ren menancingly screaming more](https://giphy.com/embed/OsfVaOer7N2265YTRF)
+![A movie still of Kylo Ren menancingly screaming more](../assets/img/kylo_ren_screaming_more.webp)
 
 # Why we keep getting it wrong
 

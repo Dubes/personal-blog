@@ -8,7 +8,7 @@ excerpt: 'We have been dealing with sustained delivery pressure for half a decad
 
 Delivery pressure. If there is one phrase that describes the state of our industry over the last five years, it has to be this. No industry is safe. The expectations are harsh. Deliver faster. Innovate more. Deliver yesterday. More features, more things, more, more, more.
 
-![A looping gif of Kylo Ren menancingly screaming more](https://giphy.com/embed/OsfVaOer7N2265YTRF)
+![A movie still of Kylo Ren menancingly screaming more](../assets/img/kylo_ren_screaming_more.webp)
 
 How did we get here? The answer is simple enough. The expectations of investors, markets, and businesses have been rising consistenly and we have not kept up with it. 
 
