@@ -1,0 +1,49 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import { formatDate, tagSlug } from '../utils/content'
+
+interface Props {
+  title: string
+  date: Date
+  excerpt?: string
+  tags?: string[]
+  draft?: boolean
+}
+
+const { title, date, excerpt = '', tags = [], draft = false } = Astro.props
+const displayTitle = title || 'Untitled draft'
+---
+
+<BaseLayout
+  title={displayTitle}
+  description={excerpt || undefined}
+  noindex={draft}
+  type="article"
+>
+  <article class="post">
+    <h1 class="visually-hidden">{displayTitle}</h1>
+    {draft && <p class="visually-hidden">Draft preview</p>}
+    <time datetime={date.toISOString()}>{formatDate(date)}</time>
+    <div class="post-body"><slot /></div>
+    {
+      !draft && tags.length > 0 && (
+        <ul class="tag-list" aria-label="Tags">
+          {tags.map((tag) => (
+            <li>
+              <a href={`/tags/${tagSlug(tag)}/`}>{tag}</a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+    <footer class="post-footer">
+      <strong>Comments:</strong>
+      <p>
+        Nothing good has ever come out of the comments section on the internet.
+        But I would love to hear your thoughts on{' '}
+        <a href="https://bsky.app/profile/dubes.bsky.social">Bluesky</a> or{' '}
+        <a href="https://www.linkedin.com/in/kapil-dube/">LinkedIn</a>.
+      </p>
+    </footer>
+  </article>
+</BaseLayout>

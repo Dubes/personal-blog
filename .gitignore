@@ -72,7 +72,12 @@ public
 
 # Yarn
 yarn-error.log
+.yarn/install-state.gz
 .pnp/
 .pnp.js
+
+# Astro
+.astro/
+dist/
 # Yarn Integrity file
 .yarn-integrity

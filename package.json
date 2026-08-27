@@ -1,43 +1,37 @@
 {
   "name": "personal-blog",
   "private": true,
-  "description": "Personal blog powered by Gatsby & React",
+  "description": "Kapil Dube's personal blog, built with Astro",
   "version": "0.1.0",
   "author": "Kapil Dube <dube.kapil@gmail.com>",
-  "dependencies": {
-    "@weknow/gatsby-remark-twitter": "^0.2.3",
-    "gatsby": "5.13.4",
-    "gatsby-plugin-manifest": "5.13.1",
-    "gatsby-plugin-react-helmet": "^6.13.1",
-    "gatsby-plugin-sharp": "^5.13.1",
-    "gatsby-plugin-typography": "^5.13.1",
-    "gatsby-remark-external-links": "^0.0.4",
-    "gatsby-remark-images": "7.13.1",
-    "gatsby-remark-prismjs": "7.13.1",
-    "gatsby-source-filesystem": "^5.13.1",
-    "gatsby-transformer-remark": "6.13.1",
-    "gatsby-transformer-sharp": "^5.13.1",
-    "prismjs": "1.29.0",
-    "prop-types": "^15.8.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-helmet": "^6.1.0",
-    "react-typography": "^0.16.23",
-    "typography": "^0.16.24"
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "yarn develop",
-    "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "develop": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "start": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "post:promote": "node scripts/move-post.mjs promote",
+    "post:demote": "node scripts/move-post.mjs demote",
+    "test": "node --test",
+    "test:smoke": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "^7.2.4",
+    "@astrojs/mdx": "^7.0.8",
+    "@astrojs/rss": "^4.0.19",
+    "astro": "^7.2.9",
+    "rehype-external-links": "^3.0.0"
   },
   "devDependencies": {
-    "prettier": "^3.2.5"
+    "@astrojs/check": "^0.9.10",
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^6.0.3"
   },
   "repository": {
     "type": "git",
@@ -46,5 +40,6 @@
   "bugs": {
     "url": "https://github.com/Dubes/personal-blog/issues"
   },
+  "license": "MIT",
   "packageManager": "yarn@4.1.1"
 }
