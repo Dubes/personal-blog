@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
 import icon16 from '../assets/favicon-16x16.png'
 import icon32 from '../assets/favicon-32x32.png'
 import '../styles/global.css'
@@ -52,9 +53,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
     {noindex && <meta name="robots" content="noindex, nofollow" />}
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-layout">
       <Header />
-      <main class="blog-content"><slot /></main>
+      <main id="main-content" class="blog-content"><slot /></main>
+      <Footer />
     </div>
   </body>
 </html>

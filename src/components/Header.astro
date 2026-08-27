@@ -1,3 +1,27 @@
+---
+const path = Astro.url.pathname
+const writingIsCurrent = path === '/' || path.startsWith('/blog/')
+const aboutIsCurrent = path.startsWith('/about')
+---
+
 <header class="website-header">
-  <a class="website-title" href="/">Observance</a>
+  <div class="header-inner">
+    <a
+      class="website-title"
+      href="/"
+      aria-label="Observance by Kapil Dube, home"
+    >
+      <span class="website-title-name">Observance</span>
+      <span class="website-title-byline">by Kapil Dube</span>
+    </a>
+    <nav class="site-navigation" aria-label="Main navigation">
+      <a href="/" aria-current={writingIsCurrent ? 'page' : undefined}
+        >Writing</a
+      >
+      <a href="/about/" aria-current={aboutIsCurrent ? 'page' : undefined}
+        >About</a
+      >
+      <a href="/rss.xml">RSS</a>
+    </nav>
+  </div>
 </header>

@@ -1,18 +1,37 @@
 ---
-import { formatDate } from '../utils/content'
+import { formatDate, tagSlug } from '../utils/content'
 
 interface Props {
   path: string
   date: Date
   title: string
   excerpt: string
+  tags?: string[]
+  featured?: boolean
 }
 
-const { path, date, title, excerpt } = Astro.props
+const { path, date, title, excerpt, tags = [], featured = false } = Astro.props
 ---
 
-<article class="blog-teaser">
+<article class:list={['blog-teaser', { 'blog-teaser-featured': featured }]}>
+  <div class="teaser-meta">
+    {featured && <span class="teaser-label">Latest essay</span>}
+    <time datetime={date.toISOString()}>{formatDate(date)}</time>
+  </div>
   <h2><a href={path} rel="bookmark">{title}</a></h2>
-  <time datetime={date.toISOString()}>{formatDate(date)}</time>
   <p>{excerpt}</p>
+  {
+    tags.length > 0 && (
+      <ul class="teaser-tags" aria-label="Tags">
+        {tags.map((tag) => (
+          <li>
+            <a href={`/tags/${tagSlug(tag)}/`}>{tag}</a>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+  <a class="teaser-read-link" href={path} aria-label={`Read ${title}`}>
+    Read essay <span aria-hidden="true">→</span>
+  </a>
 </article>

@@ -7,7 +7,14 @@ const tags = groupPostsByTag(await getCollection('blog'))
 ---
 
 <BaseLayout title="Tags" description="Browse Observance posts by tag.">
-  <h1>Tags</h1>
+  <header class="page-heading">
+    <p class="eyebrow">The archive</p>
+    <h1>Browse by topic</h1>
+    <p>
+      Follow a thread through the ideas, experiments, and lessons collected
+      here.
+    </p>
+  </header>
   <ul class="tag-index">
     {
       tags.map((tag) => (
