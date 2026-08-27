@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { groupPostsByTag } from '../../utils/content'
+
+const tags = groupPostsByTag(await getCollection('blog'))
+---
+
+<BaseLayout title="Tags" description="Browse Observance posts by tag.">
+  <h1>Tags</h1>
+  <ul class="tag-index">
+    {
+      tags.map((tag) => (
+        <li>
+          <a href={`/tags/${tag.slug}/`}>{tag.label}</a>
+          <span> ({tag.posts.length})</span>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>

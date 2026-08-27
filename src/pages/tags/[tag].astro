@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogTeaser from '../../components/BlogTeaser.astro'
+import { groupPostsByTag, type TagGroup } from '../../utils/content'
+
+export async function getStaticPaths() {
+  const groups = groupPostsByTag(await getCollection('blog'))
+
+  return groups.map((group) => ({
+    params: { tag: group.slug },
+    props: { group },
+  }))
+}
+
+interface Props {
+  group: TagGroup
+}
+
+const { group } = Astro.props
+---
+
+<BaseLayout
+  title={`Posts tagged ${group.label}`}
+  description={`Observance posts tagged ${group.label}.`}
+>
+  <h1>Posts tagged “{group.label}”</h1>
+  {
+    group.posts.map((post) => (
+      <BlogTeaser
+        path={`/blog${post.data.path}/`}
+        date={post.data.date}
+        title={post.data.title}
+        excerpt={post.data.excerpt}
+      />
+    ))
+  }
+</BaseLayout>

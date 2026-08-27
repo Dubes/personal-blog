@@ -1,0 +1,30 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content'
+import PostLayout from '../../layouts/PostLayout.astro'
+
+export async function getStaticPaths() {
+  const drafts = await getCollection('drafts')
+
+  return drafts.map((draft) => ({
+    params: { slug: draft.data.path.slice(1) },
+    props: { draft },
+  }))
+}
+
+interface Props {
+  draft: CollectionEntry<'drafts'>
+}
+
+const { draft } = Astro.props
+const { Content } = await render(draft)
+---
+
+<PostLayout
+  title={draft.data.title}
+  date={draft.data.date}
+  excerpt={draft.data.excerpt}
+  tags={draft.data.tags}
+  draft
+>
+  <Content />
+</PostLayout>

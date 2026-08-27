@@ -1,0 +1,11 @@
+.astro/
+.serena/
+.vscode/
+.yarn/
+dist/
+node_modules/
+public/
+src/archive/
+src/content/
+src/drafts/
+src/templates/

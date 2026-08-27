@@ -1,0 +1,60 @@
+---
+import Header from '../components/Header.astro'
+import icon16 from '../assets/favicon-16x16.png'
+import icon32 from '../assets/favicon-32x32.png'
+import '../styles/global.css'
+
+interface Props {
+  title: string
+  description?: string
+  noindex?: boolean
+  type?: 'website' | 'article'
+}
+
+const {
+  title,
+  description = 'Collection of my learnings, philosophy, mistakes & observations.',
+  noindex = false,
+  type = 'website',
+} = Astro.props
+const siteTitle = "Kapil's personal blog"
+const fullTitle = `${title} | ${siteTitle}`
+const canonical = new URL(Astro.url.pathname, Astro.site)
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonical} />
+    <link rel="canonical" href={canonical} />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={siteTitle}
+      href="/rss.xml"
+    />
+    <link rel="icon" type="image/png" sizes="16x16" href={icon16.src} />
+    <link rel="icon" type="image/png" sizes="32x32" href={icon32.src} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+  </head>
+  <body>
+    <div class="site-layout">
+      <Header />
+      <main class="blog-content"><slot /></main>
+    </div>
+  </body>
+</html>
