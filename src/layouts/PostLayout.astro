@@ -7,26 +7,18 @@ interface Props {
   date: Date
   excerpt?: string
   tags?: string[]
-  draft?: boolean
 }
 
-const { title, date, excerpt = '', tags = [], draft = false } = Astro.props
-const displayTitle = title || 'Untitled draft'
+const { title, date, excerpt = '', tags = [] } = Astro.props
 ---
 
-<BaseLayout
-  title={displayTitle}
-  description={excerpt || undefined}
-  noindex={draft}
-  type="article"
->
+<BaseLayout title={title} description={excerpt || undefined} type="article">
   <article class="post">
-    <h1 class="visually-hidden">{displayTitle}</h1>
-    {draft && <p class="visually-hidden">Draft preview</p>}
+    <h1 class="visually-hidden">{title}</h1>
     <time datetime={date.toISOString()}>{formatDate(date)}</time>
     <div class="post-body"><slot /></div>
     {
-      !draft && tags.length > 0 && (
+      tags.length > 0 && (
         <ul class="tag-list" aria-label="Tags">
           {tags.map((tag) => (
             <li>

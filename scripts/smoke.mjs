@@ -28,6 +28,7 @@ async function entries(directory) {
 
       return {
         date: value('date'),
+        excerpt: value('excerpt'),
         path: value('path').replace(/^['"]|['"]$/g, ''),
         title: value('title').replace(/^['"]|['"]$/g, ''),
         tags,
@@ -51,7 +52,6 @@ function tagSlug(tag) {
 }
 
 const publicPosts = await entries('content')
-const drafts = await entries('drafts')
 const homepage = await readFile(path.join(root, 'dist', 'index.html'), 'utf8')
 const feed = await readFile(path.join(root, 'dist', 'rss.xml'), 'utf8')
 
@@ -61,6 +61,9 @@ for (const post of [...publicPosts].sort((a, b) =>
 )) {
   const html = await readFile(outputPath('blog', post.path), 'utf8')
   assert.match(html, /rel="canonical"/)
+  assert.match(html, /<title>[^<]+<\/title>/)
+  assert.match(html, /property="og:description"/)
+  assert.match(html, /<meta name="description" content="[^"]+"/)
   assert.match(html, /property="og:type" content="article"/)
   assert.ok(
     feed.includes(`/blog${post.path}/`),
@@ -86,16 +89,6 @@ for (const post of [...publicPosts].sort((a, b) =>
   }
 }
 
-for (const draft of drafts) {
-  const html = await readFile(outputPath('drafts', draft.path), 'utf8')
-  assert.match(html, /name="robots" content="noindex, nofollow"/)
-  assert.ok(
-    !homepage.includes(`/drafts${draft.path}/`),
-    `${draft.path} leaked to homepage`
-  )
-  assert.ok(!feed.includes(draft.path), `${draft.path} leaked to RSS`)
-}
-
 const imagePost = await readFile(
   outputPath('blog', '/making-story-points-work'),
   'utf8'
@@ -112,6 +105,4 @@ const codePost = await readFile(
 )
 assert.match(codePost, /class="astro-code github-dark"/)
 
-console.log(
-  `Smoke-tested ${publicPosts.length} posts and ${drafts.length} drafts.`
-)
+console.log(`Smoke-tested ${publicPosts.length} published posts.`)
