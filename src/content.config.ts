@@ -16,15 +16,4 @@ const blog = defineCollection({
   }),
 })
 
-const drafts = defineCollection({
-  loader: glob({ pattern: '**/*.mdx', base: './src/drafts' }),
-  schema: z.object({
-    path,
-    date: z.coerce.date(),
-    title: z.string().default(''),
-    tags,
-    excerpt: z.string().default(''),
-  }),
-})
-
-export const collections = { blog, drafts }
+export const collections = { blog }

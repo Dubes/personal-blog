@@ -15,8 +15,6 @@
     "start": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "post:promote": "node scripts/move-post.mjs promote",
-    "post:demote": "node scripts/move-post.mjs demote",
     "test": "node --test",
     "test:smoke": "node scripts/smoke.mjs"
   },
