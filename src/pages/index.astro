@@ -6,21 +6,48 @@ import BlogTeaser from '../components/BlogTeaser.astro'
 import { sortPosts } from '../utils/content'
 
 const posts = sortPosts(await getCollection('blog'))
+const [latestPost, ...otherPosts] = posts
 ---
 
 <BaseLayout title="Home">
   <ShortBio />
-  <section aria-labelledby="latest-posts">
-    <h1 id="latest-posts" class="latest-posts-heading">Latest Posts</h1>
-    {
-      posts.map((post) => (
+  {
+    latestPost && (
+      <section
+        class="featured-writing"
+        aria-labelledby="featured-writing-title"
+      >
+        <h2 id="featured-writing-title" class="section-heading">
+          Featured writing
+        </h2>
         <BlogTeaser
-          path={`/blog${post.data.path}/`}
-          date={post.data.date}
-          title={post.data.title}
-          excerpt={post.data.excerpt}
+          path={`/blog${latestPost.data.path}/`}
+          date={latestPost.data.date}
+          title={latestPost.data.title}
+          excerpt={latestPost.data.excerpt}
+          tags={latestPost.data.tags}
+          featured
         />
-      ))
-    }
+      </section>
+    )
+  }
+  <section class="writing-list-section" aria-labelledby="latest-posts">
+    <div class="section-heading-row">
+      <h2 id="latest-posts" class="section-heading">More writing</h2>
+      <a href="/tags/">Browse by topic</a>
+    </div>
+    <div class="writing-list">
+      {
+        otherPosts.map((post) => (
+          <BlogTeaser
+            path={`/blog${post.data.path}/`}
+            date={post.data.date}
+            title={post.data.title}
+            excerpt={post.data.excerpt}
+            tags={post.data.tags}
+          />
+        ))
+      }
+    </div>
   </section>
 </BaseLayout>

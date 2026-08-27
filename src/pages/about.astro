@@ -1,8 +1,32 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import { Image } from 'astro:assets'
+import portrait from '../assets/kdu_bio.png'
 ---
 
 <BaseLayout title="About Me">
-  <h1>About Me</h1>
-  <p>Hi! This is Kapil, nice to meetcha!</p>
+  <header class="page-heading">
+    <p class="eyebrow">About</p>
+    <h1>Hi! I’m Kapil. Nice to meetcha!</h1>
+  </header>
+  <div class="about-layout">
+    <Image src={portrait} alt="Kapil Dube" width={240} height={240} />
+    <div class="about-copy">
+      <p>
+        I’m a tech leader based in Germany. My mission is to help organisations
+        achieve their ambitious goals by creating simpler solutions and enabling
+        teams and individuals to find the answers and unleash their potential.
+      </p>
+      <p>
+        Observance is where I share my thoughts, learnings, mistakes, and
+        experiments.
+      </p>
+      <p class="about-links">
+        Find me on <a href="https://bsky.app/profile/dubes.bsky.social"
+          >Bluesky</a
+        >
+        or <a href="https://www.linkedin.com/in/kapil-dube/">LinkedIn</a>.
+      </p>
+    </div>
+  </div>
 </BaseLayout>
