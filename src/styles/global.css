@@ -1,16 +1,16 @@
 :root {
-  color-scheme: light dark;
-  --page: #fff8eb;
-  --surface: #fffdf7;
-  --surface-soft: #f7e7cb;
-  --text: #18352e;
-  --muted: #536860;
-  --accent: #bd432d;
-  --accent-hover: #8f2e20;
-  --teal: #006f69;
-  --gold: #e8b838;
-  --rule: #b8cbc2;
-  --focus: #006f69;
+  color-scheme: light;
+  --page: #fff8f0;
+  --surface: #fffcf8;
+  --surface-soft: #f6ddd2;
+  --text: #1e1a18;
+  --muted: #665d58;
+  --accent: #d9654e;
+  --accent-hover: #ad4937;
+  --teal: #7c9bb8;
+  --gold: #efa08c;
+  --rule: #d8c8c0;
+  --focus: #7c9bb8;
   --display: 'Bricolage Grotesque', system-ui, sans-serif;
   --heading: 'Nunito Sans', system-ui, sans-serif;
   --reading: 'Literata', Georgia, serif;
@@ -40,7 +40,7 @@ body {
   background-color: var(--page);
   background-image: radial-gradient(
     circle,
-    rgb(0 111 105 / 11%) 1px,
+    rgb(124 155 184 / 11%) 1px,
     transparent 1px
   );
   background-position: 0 0;
@@ -54,7 +54,7 @@ body::before {
   background: linear-gradient(
     180deg,
     var(--page) 0,
-    rgb(255 248 235 / 88%) 32rem,
+    rgb(255 248 240 / 88%) 32rem,
     var(--page) 60rem
   );
   content: '';
@@ -186,6 +186,7 @@ p {
 }
 
 .site-navigation a,
+.theme-toggle,
 .website-footer nav a {
   padding: 0.42rem 0.75rem;
   border-radius: 999px;
@@ -197,7 +198,16 @@ p {
   text-transform: uppercase;
 }
 
+.theme-toggle {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: inherit;
+}
+
 .site-navigation a:hover,
+.theme-toggle:hover,
 .website-footer nav a:hover {
   background: var(--surface-soft);
   color: var(--text);
@@ -763,35 +773,69 @@ code {
   color: var(--muted);
 }
 
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --page: #1e1a18;
+  --surface: #2a2421;
+  --surface-soft: #43352f;
+  --text: #fff8f0;
+  --muted: #d7c9c0;
+  --accent: #ef9b87;
+  --accent-hover: #ffc8b9;
+  --teal: #afc5d8;
+  --gold: #f2ad9b;
+  --rule: #5a4c46;
+  --focus: #bfd3e3;
+  --shadow-offset: 0.4rem 0.4rem 0 #090706;
+}
+
+:root[data-theme='dark'] body {
+  background-image: radial-gradient(
+    circle,
+    rgb(175 197 216 / 9%) 1px,
+    transparent 1px
+  );
+}
+
+:root[data-theme='dark'] body::before {
+  background: linear-gradient(
+    180deg,
+    var(--page) 0,
+    rgb(30 26 24 / 88%) 32rem,
+    var(--page) 60rem
+  );
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
-    --page: #10201b;
-    --surface: #172c25;
-    --surface-soft: #294038;
-    --text: #f8f1e5;
-    --muted: #b9cbc3;
-    --accent: #ff9174;
-    --accent-hover: #ffc0ac;
-    --teal: #78d9cf;
-    --gold: #f2c95d;
-    --rule: #466159;
-    --focus: #a0eee6;
-    --shadow-offset: 0.4rem 0.4rem 0 #050c09;
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --page: #1e1a18;
+    --surface: #2a2421;
+    --surface-soft: #43352f;
+    --text: #fff8f0;
+    --muted: #d7c9c0;
+    --accent: #ef9b87;
+    --accent-hover: #ffc8b9;
+    --teal: #afc5d8;
+    --gold: #f2ad9b;
+    --rule: #5a4c46;
+    --focus: #bfd3e3;
+    --shadow-offset: 0.4rem 0.4rem 0 #090706;
   }
 
-  body {
+  :root:not([data-theme]) body {
     background-image: radial-gradient(
       circle,
-      rgb(120 217 207 / 9%) 1px,
+      rgb(175 197 216 / 9%) 1px,
       transparent 1px
     );
   }
 
-  body::before {
+  :root:not([data-theme]) body::before {
     background: linear-gradient(
       180deg,
       var(--page) 0,
-      rgb(16 32 27 / 88%) 32rem,
+      rgb(30 26 24 / 88%) 32rem,
       var(--page) 60rem
     );
   }
@@ -812,7 +856,8 @@ code {
     gap: 0.2rem;
   }
 
-  .site-navigation a {
+  .site-navigation a,
+  .theme-toggle {
     padding-inline: 0.55rem;
     font-size: 0.7rem;
   }
