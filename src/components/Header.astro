@@ -22,6 +22,43 @@ const aboutIsCurrent = path.startsWith('/about')
         >About</a
       >
       <a href="/rss.xml">RSS</a>
+      <button class="theme-toggle" type="button" data-theme-toggle>
+        <span aria-hidden="true" data-theme-toggle-icon>☾</span>
+        <span data-theme-toggle-label>Dark</span>
+      </button>
     </nav>
   </div>
 </header>
+
+<script>
+  const themeToggle = document.querySelector<HTMLButtonElement>(
+    '[data-theme-toggle]'
+  )
+  const themeLabel = document.querySelector<HTMLElement>(
+    '[data-theme-toggle-label]'
+  )
+  const themeIcon = document.querySelector<HTMLElement>(
+    '[data-theme-toggle-icon]'
+  )
+
+  const updateThemeToggle = (theme: 'light' | 'dark') => {
+    const nextTheme = theme === 'light' ? 'dark' : 'light'
+
+    themeToggle?.setAttribute('aria-label', `Switch to ${nextTheme} theme`)
+    themeLabel && (themeLabel.textContent = nextTheme)
+    themeIcon && (themeIcon.textContent = nextTheme === 'dark' ? '☾' : '☀')
+  }
+
+  const currentTheme =
+    document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light'
+  updateThemeToggle(currentTheme)
+
+  themeToggle?.addEventListener('click', () => {
+    const nextTheme =
+      document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'
+
+    document.documentElement.dataset.theme = nextTheme
+    localStorage.setItem('observance-theme', nextTheme)
+    updateThemeToggle(nextTheme)
+  })
+</script>
