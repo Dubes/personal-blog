@@ -186,7 +186,6 @@ p {
 }
 
 .site-navigation a,
-.theme-toggle,
 .website-footer nav a {
   padding: 0.42rem 0.75rem;
   border-radius: 999px;
@@ -199,15 +198,55 @@ p {
 }
 
 .theme-toggle {
+  position: relative;
+  display: inline-flex;
+  width: 3rem;
+  height: 1.65rem;
+  padding: 0;
   border: 0;
+  border: 2px solid var(--text);
+  border-radius: 999px;
   background: transparent;
+  color: var(--text);
   cursor: pointer;
   font-family: inherit;
   line-height: inherit;
 }
 
+.theme-toggle::after {
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  width: 0.95rem;
+  aspect-ratio: 1;
+  transform: translateX(0);
+  border-radius: 50%;
+  background: var(--text);
+  content: '';
+  transition:
+    transform 160ms ease,
+    background-color 160ms ease;
+}
+
+.theme-toggle-icons {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 0.28rem;
+}
+
+.theme-toggle-icons svg {
+  width: 0.68rem;
+  height: 0.68rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.5;
+}
+
 .site-navigation a:hover,
-.theme-toggle:hover,
 .website-footer nav a:hover {
   background: var(--surface-soft);
   color: var(--text);
@@ -216,6 +255,15 @@ p {
 .site-navigation a[aria-current='page'] {
   background: var(--text);
   color: var(--page);
+}
+
+.theme-toggle:hover {
+  background: var(--surface-soft);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
 }
 
 .blog-content {
@@ -244,7 +292,7 @@ p {
 
 .intro::after {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: -1rem;
   right: -1rem;
   width: clamp(10rem, 22vw, 17rem);
@@ -253,6 +301,12 @@ p {
   border-radius: 38% 62% 55% 45% / 48% 38% 62% 52%;
   background: var(--gold);
   content: '';
+}
+
+.intro-copy,
+.intro-portrait {
+  position: relative;
+  z-index: 1;
 }
 
 .intro h1 {
@@ -270,17 +324,18 @@ p {
 }
 
 .intro-portrait {
-  position: relative;
   padding: 0.6rem;
+  transform: translate(-3rem, -7.5rem);
 }
 
 .intro-portrait img {
-  width: clamp(8rem, 17vw, 11rem);
+  width: clamp(10rem, 19vw, 13rem);
   aspect-ratio: 1;
   border: 3px solid var(--text);
   border-radius: 48% 52% 45% 55% / 55% 44% 56% 45%;
   box-shadow: var(--shadow-offset);
   object-fit: cover;
+  object-position: center;
 }
 
 .text-link,
@@ -528,10 +583,13 @@ time {
 
 .about-layout img {
   width: clamp(11rem, 25vw, 16rem);
+  aspect-ratio: 1;
   transform: rotate(-2deg);
   border: 3px solid var(--text);
   border-radius: var(--radius-large);
   box-shadow: var(--shadow-offset);
+  object-fit: cover;
+  object-position: center;
 }
 
 .about-copy {
@@ -806,6 +864,11 @@ code {
   );
 }
 
+:root[data-theme='dark'] .theme-toggle::after {
+  transform: translateX(1.32rem);
+  background: var(--gold);
+}
+
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     color-scheme: dark;
@@ -839,6 +902,11 @@ code {
       var(--page) 60rem
     );
   }
+
+  :root:not([data-theme]) .theme-toggle::after {
+    transform: translateX(1.32rem);
+    background: var(--gold);
+  }
 }
 
 @media (max-width: 800px) {
@@ -856,8 +924,7 @@ code {
     gap: 0.2rem;
   }
 
-  .site-navigation a,
-  .theme-toggle {
+  .site-navigation a {
     padding-inline: 0.55rem;
     font-size: 0.7rem;
   }
@@ -875,6 +942,7 @@ code {
   .intro-portrait {
     width: fit-content;
     grid-row: 1;
+    transform: translate(1rem, -3rem);
   }
 
   .writing-list {
