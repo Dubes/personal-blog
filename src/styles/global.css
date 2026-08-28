@@ -12,6 +12,7 @@
   --rule: #b8cbc2;
   --focus: #006f69;
   --display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --heading: 'Nunito Sans', system-ui, sans-serif;
   --reading: 'Literata', Georgia, serif;
   --content-width: 74rem;
   --reading-width: 43rem;
@@ -96,6 +97,10 @@ h6 {
   text-wrap: balance;
 }
 
+h1 {
+  font-family: var(--heading);
+}
+
 p {
   margin-block: 0 1.2em;
 }
@@ -149,7 +154,6 @@ p {
   color: var(--text);
   flex-direction: column;
   text-decoration: none;
-  transform: rotate(-1deg);
 }
 
 .website-title:hover {
@@ -157,20 +161,19 @@ p {
 }
 
 .website-title-name {
+  font-family: var(--reading);
   font-size: 1.85rem;
-  font-weight: 800;
-  letter-spacing: -0.05em;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.04em;
   line-height: 0.95;
 }
 
 .website-title-byline {
-  width: fit-content;
   margin-top: 0.38rem;
-  padding: 0.05rem 0.32rem;
-  background: var(--gold);
-  color: var(--text);
+  color: var(--muted);
   font-size: 0.65rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -247,7 +250,7 @@ p {
   margin-bottom: 0.38em;
   font-size: clamp(3.3rem, 7.8vw, 6.5rem);
   font-weight: 750;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.04em;
 }
 
 .intro-copy > p:not(.eyebrow) {
@@ -450,8 +453,8 @@ time {
 
 .website-footer {
   border-top: 2px solid var(--text);
-  background: var(--text);
-  color: var(--page);
+  background: var(--page);
+  color: var(--text);
 }
 
 .footer-inner {
@@ -479,7 +482,7 @@ time {
 }
 
 .website-footer nav a {
-  color: var(--page);
+  color: var(--text);
 }
 
 .website-footer nav a:hover {
@@ -496,7 +499,7 @@ time {
 .not-found h1 {
   font-size: clamp(3.2rem, 7.8vw, 6rem);
   font-weight: 750;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.04em;
 }
 
 .page-heading > p:last-child {
@@ -608,7 +611,7 @@ time {
   margin: 0.65em 0 0.4em;
   font-size: clamp(3.2rem, 7.6vw, 6.4rem);
   font-weight: 750;
-  letter-spacing: -0.065em;
+  letter-spacing: -0.045em;
 }
 
 .back-link {
