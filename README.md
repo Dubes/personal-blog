@@ -16,7 +16,7 @@ yarn develop
 
 The development server renders the posts in the current branch.
 
-## Writing
+## Essays
 
 - Published posts live in `src/content/` and render at `/blog/<slug>/`.
 - Start new posts from `src/templates/post.mdx`.
