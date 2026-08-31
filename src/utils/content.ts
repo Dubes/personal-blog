@@ -2,7 +2,7 @@ import type { CollectionEntry } from 'astro:content'
 
 export type BlogPost = CollectionEntry<'blog'>
 
-export function sortPosts(posts: BlogPost[]): BlogPost[] {
+export function sortPosts<T extends { data: { date: Date } }>(posts: T[]): T[] {
   return [...posts].sort(
     (left, right) => right.data.date.getTime() - left.data.date.getTime()
   )

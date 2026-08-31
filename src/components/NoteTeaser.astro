@@ -1,0 +1,20 @@
+---
+import { formatDate } from '../utils/content'
+
+interface Props {
+  href: string
+  date: Date
+  title: string
+  excerpt?: string
+}
+
+const { href, date, title, excerpt } = Astro.props
+---
+
+<article class="blog-teaser">
+  <div class="teaser-meta">
+    <time datetime={date.toISOString()}>{formatDate(date)}</time>
+  </div>
+  <h2><a href={href} rel="bookmark">{title}</a></h2>
+  {excerpt && <p>{excerpt}</p>}
+</article>

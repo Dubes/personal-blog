@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import NoteTeaser from '../../components/NoteTeaser.astro'
+import { sortPosts } from '../../utils/content'
+
+const notes = sortPosts(await getCollection('musings'))
+---
+
+<BaseLayout
+  title="Musings"
+  description="Shorter, rawer notes — thinking out loud between the essays."
+>
+  <header class="page-heading">
+    <p class="eyebrow">Musings</p>
+    <h1>Thinking out loud.</h1>
+    <p>
+      Shorter, rawer notes and half-formed thoughts — less polished than the
+      essays, but still mine.
+    </p>
+  </header>
+  {
+    notes.length > 0 ? (
+      <div class="writing-list">
+        {notes.map((note) => (
+          <NoteTeaser
+            href={`/musings${note.data.path}/`}
+            date={note.data.date}
+            title={note.data.title}
+            excerpt={note.data.excerpt}
+          />
+        ))}
+      </div>
+    ) : (
+      <p>Nothing here yet. Check back soon.</p>
+    )
+  }
+</BaseLayout>

@@ -1,6 +1,8 @@
 ---
 const path = Astro.url.pathname
 const writingIsCurrent = path === '/' || path.startsWith('/blog/')
+const musingsIsCurrent = path.startsWith('/musings')
+const ramblingsIsCurrent = path.startsWith('/ramblings')
 const aboutIsCurrent = path.startsWith('/about')
 ---
 
@@ -17,6 +19,13 @@ const aboutIsCurrent = path.startsWith('/about')
     <nav class="site-navigation" aria-label="Main navigation">
       <a href="/" aria-current={writingIsCurrent ? 'page' : undefined}
         >Writing</a
+      >
+      <a href="/musings/" aria-current={musingsIsCurrent ? 'page' : undefined}
+        >Musings</a
+      >
+      <a
+        href="/ramblings/"
+        aria-current={ramblingsIsCurrent ? 'page' : undefined}>Ramblings</a
       >
       <a href="/about/" aria-current={aboutIsCurrent ? 'page' : undefined}
         >About</a
