@@ -7,16 +7,25 @@ interface Props {
   date: Date
   excerpt?: string
   tags?: string[]
+  backHref?: string
+  backLabel?: string
 }
 
-const { title, date, excerpt = '', tags = [] } = Astro.props
+const {
+  title,
+  date,
+  excerpt = '',
+  tags = [],
+  backHref = '/',
+  backLabel = 'All writing',
+} = Astro.props
 ---
 
 <BaseLayout title={title} description={excerpt || undefined} type="article">
   <article class="post">
     <header class="post-header">
-      <a class="back-link" href="/"
-        ><span aria-hidden="true">←</span> All writing</a
+      <a class="back-link" href={backHref}
+        ><span aria-hidden="true">←</span> {backLabel}</a
       >
       <h1>{title}</h1>
       <div class="post-meta">
