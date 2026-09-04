@@ -745,12 +745,18 @@ time {
 }
 
 blockquote {
-  margin: 2.5rem 0;
-  padding: 1.4rem 1.5rem;
-  border: 2px solid var(--text);
-  border-radius: var(--radius-medium);
-  background: var(--surface-soft);
-  font-style: italic;
+  max-width: 42rem;
+  margin: 2.5rem auto;
+  padding: 0.4rem 0 0.4rem 1.5rem;
+  border: 0;
+  border-left: 4px solid var(--text);
+  border-radius: 0;
+  background: transparent;
+  font-style: normal;
+}
+
+blockquote p {
+  margin: 0;
 }
 
 blockquote > :last-child {
