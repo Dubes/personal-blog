@@ -13,7 +13,7 @@
   --focus: #7c9bb8;
   --display: 'Bricolage Grotesque', system-ui, sans-serif;
   --heading: 'Nunito Sans', system-ui, sans-serif;
-  --reading: 'Literata', Georgia, serif;
+  --reading: 'Montserrat', Arial, sans-serif;
   --content-width: 74rem;
   --reading-width: 43rem;
   --radius-small: 0.8rem;
@@ -677,7 +677,6 @@ time {
   margin: 0.65em 0 0.4em;
   font-size: clamp(2.4rem, 5vw, 3.4rem);
   font-weight: 750;
-  letter-spacing: -0.045em;
 }
 
 .back-link {
