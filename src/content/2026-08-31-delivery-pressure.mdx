@@ -69,10 +69,12 @@ Many a times I have seen leaders at all level try to protect people by shielding
 ## Do not make decisions without involving the people impacted
 This is an extension of the point above. I have seen huge architectural and even proces changes being made without even consulting the team. The decision is made 3 to 4 layers above and then communicated as directives in a cascading manner. There are lot of downsides of doing it. No buy-in from the people you need to make it happen. Finger pointing / lack of accountability, people adjusting their performance to meet expectations. If you treat your developers as mere code outputting humans, they will stop being developers and perform as coders. 
 
-## Do not hyperfocus on a metric
-Focussing on a metric is a great thing to bring upon real change, but there is a real risk of choosing the wrong metric. Often I have seen people hyperfocus on _Velocity_ or _Capacity_ or _Tokenmaxxing_ these are the most visible metric and also the easiest to measure and thus game. If you are constantly pushing your team to increase velocity without doing a real inspect and adapt cycle, the result is what used to be marked as 3 stor points become a 5, the 5s become 8s and so on so forth. Things are connected. Changing one isn't without side effects. It is a game of tradeoffs. Always keep a holistic view and set realistic targets for improvement on the metrics you are focussing on.
+## Do not hyper fixate on a metric
+Metrics are great and if done right, they will help you get out of delivery pressure. Their curse is that they are very easy to collect but very hard to operationalize. If you choose a metric without a clear understanding of how it drives desired outcomes, you might end up optimizing for the wrong thing.
 
-Metrics that aren't connected to a desired outcome and an accompanying change strategy are misleading. 
+Often I have seen people hyperfocus on _Velocity_ or _Capacity_ or _Tokenmaxxing_ these are the most visible metric and also the easiest to measure and thus game. If you are constantly pushing your team to increase velocity without doing a real inspect and adapt cycle, the result is what used to be marked as 3 stor points become a 5, the 5s become 8s and so on so forth. Things are connected. Changing one isn't without side effects. It is a game of tradeoffs. Always keep a holistic view and set realistic targets for improvement on the metrics you are focussing on.
+
+Metrics that aren't connected to a desired outcome and an accompanying change strategy will do more harm than good. If the metric you chose is not getting the desired outcome, do not hesitate to throw it away. Remember the desired outcome is the goal here, not the metric.
 
 ## Do not pollute the vocabulary by having your own twist on things
 This is from my perspective of being an external consultant brought into help the team. I want to get in quick, help you get back on track, ideally with small changes that stick and then get out. This gets incredibly hard when people use popular words, but reality doesn't match. Do not call your services as "micro" when they do 40 different things. Do not say they are domain-aligned when business folks and the dev team haven't talked directly in the history of their existence. Do not say you do continuous integration if you have a sprintly merge-fest. Do not claim you are doing DevOps when Ops team can only communicate with devs over an Incident ticket that was promoted to a Jira bug after a 7 step escalation process. Step 1 of fixing 💩 is acknowledging that there is 💩 to be cleaned up.
@@ -83,26 +85,35 @@ I am going to stop here. There are many more things to avoid, but these are the 
 
 ## Where are the gaps in your quality strategy?
 
-The biggest resistance to fixing delivery pressure comes from rework. The things you delivered in the past come back as bugs or change requests. This rework breas the flow, trust and in extreme cases morale. You will find yourself fire fighting and/or task forcing. If this resonates with you, your quality strategy would be the best place to start. 
+The biggest resistance to fixing delivery pressure comes from rework. The things you delivered in the past come back as bugs or change requests. This rework breaks the [flow](https://en.wikipedia.org/wiki/Flow_(psychology)), trust and in extreme cases morale. If you find  yourself fire fighting and/or task forcing more and more with each passing week, your quality strategy would be the best place to start digging into. 
 
-_Side Note:_ Quality strategy isn't just about tests and automated suites. Quality needs to be ensured across all phases of SDLC, from feature discovery to things running in production. Do not underestimate the damage caused by bad requirements and struggling support teams. Your improvements also need to work for these functions!
+_Side Note:_ Quality strategy isn't just about tests and automated suites. Quality needs to be ensured across all phases of SDLC(Software Delivery Lifecycle), from feature discovery to things running in production. Do not underestimate the damage caused by bad requirements and struggling support teams. Your improvements also need to work for these functions!
 
-## Is it architecture?
+## Has your architecture evolved?
 
-Architecture decisions are bets on the future. Look back at them. Were they the right bets? If not, it is time to revisit. Decisions should not be written in stone. Yes, they should not be trivially easy to revert either — but they cannot be untouchable.
+Many teams I talked to made or operated under architecture decisions. Some even have [Architecture Decision Records (ADR)](https://martinfowler.com/bliki/ArchitectureDecisionRecord.html)! They are able to explain those decisions very well. However, when I ask them "When was the last time you revisited a decision?", I am greeted with silence. In larger enterprises, these decisions tend to fossilize. They are treated as set in stone rather than a line in sand.
 
-## Is it people?
+The problem with this approach is though they are decisions, they are based on assumptions and predictions. I would recommend adding a section that captures _how_ you will measure the success or failure of your decision, including the date by which the changes should start showing their effect. Then make it a practice to review and revise ADRs periodically.
 
-Do you have the right people in the right positions, playing to their strengths? Are they empowered?
+## Are the people set up to succeed? 
 
-Again, counterintuitive.
+When things are going well, stable team setups, where people or roles don't change too much, are great to have! But when things are hard, stable team setups should not be the priority. Each individual is different and they also change over time and with circumstances. Yes, team should operate as a unit, but you cannot ignore the individuals.
 
-## Is it expectation setting?
+If some is in or close to a burnout. Give them the breathing space to recover and come back strong. This benefits both the individual and the team. Speaking from personal experience, burntout people don't make the best decisions. 
 
-Sometimes the pressure is simply a gap between what was promised and what can realistically be delivered. Expectation setting requires vulnerability. It is a negotiation, and one party cannot dictate terms. These are difficult conversations, and they can get heated. But you cannot avoid them forever. The longer you do, the worse it gets.
+Every individual has their strengths and their blind spots. People perform the best when their strengths are allowed to shine. This is the entire premise of [Clifton StrengthsFinder](https://www.gallup.com/cliftonstrengths/en/253790/science-of-cliftonstrengths.aspx). Are your people, especially those with the leadership responsibilities still playing to their strengths?
+
+How autonomous are the teams? What can you do to improve their autonomy?
+
+## Have you set the expectations properly?
+
+Sometimes the pressure is simply a gap between what was promised and what can realistically be delivered. Expectation setting requires vulnerability. It is a negotiation, and one party cannot dictate terms. These are difficult conversations, and they can get heated. But you cannot avoid them forever. The uncomfortable truth about difficult discussions is that they only get harder with each passing minute.
 
 # To conclude
 
 Delivery pressure is here to stay. But that does not mean we have to simply accept it and burn through it. We have to analyze where the friction actually is, resist the gut reaction to just work harder, and think strategically about what needs to change.
 
-And do not forget to ask yourself: are _you_ the right person to lead through this change? Maybe you yourself are not positioned in the right place. That question deserves honest consideration too.
+And do not forget yourself in all of this! Maybe you yourself are not positioned in the right place. Maybe these are the wrong conditions for your strengths to shine. Lastly, ask yourself periodically, are _you_ the right person to lead through this change? That question deserves honest consideration too.
+
+# Acknowledgements
+Many thanks to my wonderful colleague [Kamila Sultanova](https://www.linkedin.com/in/sultanovakamila/) for helping me sort my messy thoughts into a coherent document.
