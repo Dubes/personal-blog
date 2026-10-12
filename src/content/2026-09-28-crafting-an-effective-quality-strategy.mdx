@@ -1,0 +1,155 @@
+---
+path: '/crafting-an-effective-quality-strategy'
+date: '2026-09-28'
+title: 'Crafting an Effective Quality Strategy: Raise the Floor, Not the Ceiling'
+tags: ['quality', 'software delivery', 'strategy', 'agile', 'engineering']
+excerpt: 'A quality strategy is not a list of tests or a collection of KPIs. It is an honest, living agreement about the promises a product makes, the guarantees behind them, and the next minimum standard a team will raise together.'
+---
+
+# Introduction
+In my last post [on dealing with delivery pressure](https://observance.io/blog/delivery-pressure/), I suggested starting from looking at your quality strategy to find areas worth putting your attention towards. In this post, I will dive deeper into quality strategy, as I think it is not well understood or perhaps I view it differently compared to others.
+
+# Quality is not your test suite
+
+When people tell me they need a quality strategy, they usually mean they need more tests.
+
+Sometimes they do. But that is not usually the whole problem.
+
+Maybe the backend has excellent unit-test coverage, but the frontend does not have a comparable safety net. Maybe teams can tell you how a feature gets built, but nobody can confidently explain what needs to be true before it is released. Maybe bugs keep coming back because the requirement was unclear in the first place. Or maybe the product does exactly what it says on the tin, but costs twenty times more to run than anyone expected.
+
+None of those things are _just_ testing problems.
+
+A quality strategy should help a team make an honest statement: _these are the things we promise, this is what “good” means for each of them, and this is what a green signal actually guarantees._
+
+That is much more useful than saying “the pipeline is green”. A green pipeline without a shared meaning behind it is a comforting colour, not a quality guarantee.
+
+# Start with the promises, not the framework
+
+There are many frameworks, standards, certifications and wonderfully large tables of quality attributes. They are useful. They can also make you feel like you have accidentally signed up to catalogue every possible way software can disappoint a human being.
+
+Do not start there.
+
+Start with a simpler question:
+
+> What have we promised our customers?
+
+Look at your website, sales material, contracts, support conversations and the things customers repeatedly ask about. What do they latch on to? European compliance? Security? A workflow people can understand before it runs? Reliability? Accessibility? Fast responses? A product that does not require an operations team to perform rituals under a full moon?
+
+Those promises are the beginning of your quality strategy.
+
+Take “secure” as an example. Most organisations say it. Very few can explain what it means when a customer asks the obvious follow-up question: _How is it secure?_ If the answer is a vague collection of good intentions, you do not yet have a promise. You have a marketing adjective.
+
+The same is true for “explainable”. Showing a user every step is useful, but it is not automatically explainability. Can they understand what those steps mean? Can they see why a decision happened? Can they safely intervene? The word might be right, but the promise hidden behind it might be incomplete.
+
+Product people need to be involved here. Not because they need to decide every implementation detail, but because quality strategy is very close to product strategy. A product team should understand every quality promise being made on its behalf and the trade-offs needed to keep it.
+
+# Define the guarantee behind green
+
+The most important output of a quality strategy is not a KPI. At least not at the beginning.
+
+It is clarity about the minimum state.
+
+For every quality attribute you care about, be able to say:
+
+1. What failure are we trying to prevent or detect?
+2. What does our current check actually guarantee?
+3. Where does that guarantee end?
+4. Who owns the remaining uncertainty?
+
+Imagine a deployment script that has been checked as thoroughly as you reasonably can in a non-production environment. You may be 80–85% confident it works. The final 15–20% only becomes knowable when it runs in a real customer environment.
+
+That can be an acceptable gap. The important thing is that it is a _deliberate_ gap. Everybody understands it, knows who will observe it, and knows what happens if it does not work.
+
+There is a huge difference between “we did not test this” and “we cannot fully verify this before production, so we have designed an explicit control around that uncertainty.”
+
+Your strategy should make that difference visible.
+
+# Quality covers the whole path, not only code
+
+I have disagreed with some very good QA people on this point: for me, quality strategy needs to cover the whole path from a feature idea to operating it in the real world.
+
+Bad requirements create bugs. Missing product context creates bugs. Weak operational feedback creates bugs. A system that meets every functional expectation but becomes unaffordable to operate is still a poor-quality system.
+
+This does not mean one meeting needs to solve every concern in the universe. It means the strategy needs enough breadth to show where concerns belong and how they feed back into each other.
+
+Security, accessibility, usability, reliability, maintainability, observability and affordability are all reasonable quality conversations. You might discover that your next most important concern is not another end-to-end test. It might be defining the accessibility floor. It might be a FinOps dashboard. It might be a requirement-review habit that catches ambiguity before a developer starts building.
+
+Standards and reference models can help you find the dimensions you are missing. [arc42](https://arc42.org/) is one useful starting point for thinking about quality requirements and documenting architecture decisions. Use these things as prompts, not as homework. You do not need to adopt every attribute in a standard just because it exists.
+
+# Separate strategy from execution
+
+This is where teams often get stuck.
+
+They discover a long list of quality attributes and immediately ask, “How are we going to implement all of this?” The answer is: you are not. Not now.
+
+A strategy should last longer than the next quarter. I would expect it to remain meaningful for at least a year or two, even when the implementation details change quickly. Quality is a never-ending goal. You will never announce that the system has reached 100% quality and everybody can go home.
+
+So first define a fairly complete direction: the quality pillars, the promises behind them, the constraints you operate under, and the boundaries of your guarantees.
+
+Then let it meet reality.
+
+You may have 150 things worth improving and capacity for five. That is normal. The strategy tells you which five matter most right now; it does not demand that you execute all 150 before lunch.
+
+An implementation cadence then emerges naturally. While you are improving three things, you are discussing and preparing the next three. That is how a strategy becomes momentum instead of an impressive document everybody avoids opening.
+
+# Raise the floor
+
+I find it useful to describe each important quality area in three states:
+
+- **Minimum:** What must be true. If this is green, what is guaranteed?
+- **Ideal:** The next level we genuinely want to make normal.
+- **Aspirational:** A deliberately distant direction that gives us room to innovate and keeps us from mistaking the current ideal for the finish line.
+
+The crucial bit is that the ideal state should eventually become the next minimum state.
+
+Quality is not mainly about reaching for the ceiling. It is about raising the floor with every iteration.
+
+Take performance. “Responses should be instantaneous” is not a strategy; it is a wish. A more useful version might be: today we guarantee a response in 500 milliseconds for a defined interaction. Our ideal is 300 milliseconds. Our aspiration is effectively immediate feedback, knowing that physics and networks will have opinions about it.
+
+Once 300 milliseconds is reliable, it becomes the new floor. Then you decide what comes next.
+
+This works for access control, accessibility, recovery objectives, documentation, release confidence and much more. It also makes the cost of quality visible. Pushing closer to an aspirational state is usually more expensive. That is fine, as long as you are making the trade-off consciously instead of discovering the bill later.
+
+# Make prioritisation a real workshop
+
+You do not need to hand everyone a giant quality model and ask them to return in a week with enlightenment.
+
+Turn it into a workshop.
+
+Start with your product promises. Pick the two or three quality dimensions that matter most to keeping them. Then use a light-weight sorting exercise for the possible attributes:
+
+- We must address this.
+- We should address this at some point.
+- This does not currently apply to us.
+
+Let people move cards. Let them mark the cards they disagree with. Do not make the first pass too polite. A little productive chaos is useful because it reveals where the actual assumptions are.
+
+You will not get a perfect answer, and that is okay. There is no prize for having the most elegant board. The only truly wrong answer is making no progress because you were waiting for certainty.
+
+Once the priorities are clear, small groups or individuals can take an attribute and bring back a proposal. The proposal should describe the minimum, ideal and aspirational states, why the attribute matters, and how it connects to the customer promise. Do not force them to solve every implementation detail immediately.
+
+# Create a living, discoverable agreement
+
+A quality strategy needs to be easy to find when somebody is making a decision. Otherwise it becomes the ceremonial PDF that is only opened during an audit or a bad incident.
+
+I strongly prefer repository-level documentation to live with the repository, close to the code. If someone wants a Confluence view, generate one from the source. But the version developers, reviewers and agents encounter should be no more than one click away from the implementation.
+
+This matters even more in an agentic world.
+
+Humans can sometimes compensate for undocumented “campfire knowledge”. Someone remembers why an exception was made. Someone else knows which test was intentionally skipped. An agent can generate far more code, far more quickly, without knowing any of that context.
+
+The practices we used to treat as optional because experienced people could reason around them are becoming required. Clear constraints, decision records, quality checks and documentation are not bureaucracy for its own sake. They are the context that lets humans and agents make safe decisions repeatedly.
+
+There can be a central baseline, for example: every request must be authenticated and authorised. Individual systems can make that requirement tighter where their risk demands it. They should not quietly make it looser.
+
+That gives teams autonomy without turning every repository into a separate interpretation of “secure”.
+
+# In conclusion
+
+An effective quality strategy does not begin with a coverage target, a certification or a list of tools. It begins with honest promises.
+
+What do we claim our product does? What can we guarantee when our checks are green? Where are the known gaps? Which quality dimensions matter most now? What is the next minimum standard we are willing to hold ourselves to?
+
+The answers will evolve. They should.
+
+But if you keep those answers explicit, close to the work and connected to a regular improvement cadence, quality stops being the department that says no. It becomes a shared way of making better promises—and keeping them.
